@@ -1,0 +1,133 @@
+:root {
+  color-scheme: light;
+  --ink: #1c1915;
+  --muted: #5c564c;
+  --paper: #f3efe6;
+  --card: #fffdf8;
+  --line: #ddd4c4;
+  --accent: #0f6e56;
+  --accent-ink: #ffffff;
+  --alert: #8c2f2f;
+  --alert-bg: #f8e8e4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", "Avenir Next", "Trebuchet MS", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.5;
+}
+
+a { color: var(--accent); }
+
+.site-header,
+main,
+.site-footer {
+  width: min(960px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding: 1.5rem 0 0.5rem;
+}
+
+.brand {
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.brand-note,
+.cadence,
+.meta,
+.site-footer {
+  color: var(--muted);
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.1; margin-bottom: 0.4rem; }
+h2 { margin: 0 0 0.4rem; font-size: 1.25rem; }
+
+.intro { margin: 1.5rem 0; }
+
+.banner {
+  background: var(--alert-bg);
+  color: var(--alert);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+}
+
+.email-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+input[type="email"] {
+  font: inherit;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: white;
+  max-width: 28rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.plan,
+.panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem 1.15rem 1.2rem;
+}
+
+.price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0.2rem 0 0.6rem;
+}
+
+button,
+.inline-form button {
+  font: inherit;
+  font-weight: 600;
+  background: var(--accent);
+  color: var(--accent-ink);
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid #0b3f33;
+  outline-offset: 2px;
+}
+
+.actions,
+.panel { margin-top: 1rem; }
+
+.site-footer { padding: 2rem 0 3rem; font-size: 0.92rem; }
+
+code {
+  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  font-size: 0.9em;
+}
+
+@media (max-width: 800px) {
+  .cards { grid-template-columns: 1fr; }
+}
