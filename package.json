@@ -1,0 +1,20 @@
+{
+  "name": "td-digital-labs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TD Digital Labs pricing, Stripe Checkout, and billing portal.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "check:secrets": "node scripts/check-secrets.js"
+  },
+  "dependencies": {
+    "express": "^4.22.3",
+    "stripe": "23.1.0"
+  }
+}

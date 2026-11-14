@@ -1,0 +1,3 @@
+#!/bin/sh
+# Blocks commits that contain Stripe secret keys or webhook signing secrets.
+node scripts/check-secrets.js
